@@ -12,6 +12,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+
 # Application definition
 INSTALLED_APPS = [
     # external - admin
@@ -33,6 +37,7 @@ INSTALLED_APPS = [
     "django_browser_reload",
     # external - other
     "constance",
+    "debug_toolbar",
 ]
 
 # CONSTANCE
@@ -63,8 +68,11 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "django.middleware.gzip.GZipMiddleware",
     # tailwind
     "django_browser_reload.middleware.BrowserReloadMiddleware",
+    # utils
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = "commerce.urls"
