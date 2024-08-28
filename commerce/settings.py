@@ -18,6 +18,8 @@ INTERNAL_IPS = [
 
 # Application definition
 INSTALLED_APPS = [
+    # compression
+    "whitenoise.runserver_nostatic",
     # external - admin
     "jet",
     # django
@@ -142,4 +144,8 @@ STORAGES = {
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
+}
+
+DEBUG_TOOLBAR_CONFIG = {
+    "SHOW_TOOLBAR_CALLBACK": lambda r: True,
 }
