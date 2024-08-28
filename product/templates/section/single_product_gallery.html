@@ -1,0 +1,7 @@
+<ul id="imageGallery">
+    {% for gallery in product_gallery  %}
+    <li data-thumb="{{ gallery.image_compressed.url }}" data-src="{{ gallery.image_compressed.url }}">
+        <img src="{{ gallery.image_compressed.url }}" />
+    </li>     
+    {% endfor %}
+</ul>

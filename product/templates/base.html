@@ -1,0 +1,41 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en" data-theme="emerald">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">               
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
+        <script src="https://unpkg.com/htmx.org@2.0.2"></script>
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css" /> 
+        <title>Demo - 
+        {% block title %}
+        {% endblock title %}
+        </title>
+        {% tailwind_css %}
+        <style>
+            .work-sans {
+                font-family: 'Work Sans', sans-serif;
+            }
+
+            #menu-toggle:checked + #menu {
+                display: block;
+            }
+
+            .hover\:grow {
+                transition: all 0.3s;
+                transform: scale(1);
+            }
+
+            .hover\:grow:hover {
+                transform: scale(1.02);
+            }
+        </style>
+    </head>
+    <body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
+        {% include 'base/nav.html' %}
+        {% block main %}
+        {% endblock main %}
+        {% include 'base/footer.html' %}
+    </body>
+</html>

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static tailwind_tags %}
+
+{% block title %}
+Django Tailwind
+{% endblock title %}
+
+{% block main %}
+<main>
+    {% include 'section/home_hero.html' %}
+    {% include 'section/home_product_highlight.html' %}
+</main>
+{% endblock main %}
