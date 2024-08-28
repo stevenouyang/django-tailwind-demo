@@ -31,7 +31,29 @@ INSTALLED_APPS = [
     "tailwind",
     "theme",
     "django_browser_reload",
+    # external - other
+    "constance",
 ]
+
+# CONSTANCE
+CONSTANCE_CONFIG = {
+    "INSTAGRAM_LINK": (
+        "https://www.instagram.com",
+        "link",
+        str,
+    ),
+    "FACEBOOK_LINK": (
+        "https://www.facebook.com",
+        "link",
+        str,
+    ),
+    "ABOUT": (
+        "Laborum excepteur qui laboris consequat quis anim id. Excepteur labore mollit incididunt sunt amet sit enim quis aute est est. Fugiat ea elit fugiat ullamco. Sit irure et amet ad velit sit nostrud tempor. Irure ullamco veniam ex et dolor nostrud cillum non laborum aute labore.",
+        "text",
+        str,
+    ),
+}
+
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -58,6 +80,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "constance.context_processors.config",
             ],
         },
     },
