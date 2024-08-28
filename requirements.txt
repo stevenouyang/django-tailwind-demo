@@ -93,6 +93,7 @@ urllib3==2.2.2
 user-agents==2.2.0
 wagtail==5.2.6
 webencodings==0.5.1
+whitenoise==6.7.0
 Willow==1.6.3
 XlsxWriter==3.2.0
 zipp==3.20.0
