@@ -3,3 +3,10 @@
 3 First Terminal ( python manage.py tailwind start )
 4 Second Terminal ( python manage.py runserver )
 5 Run Redis DB (6379)
+
+admin :
+username = admin
+password = testsatuduatiga
+
+or create admin command
+python manage.py createsuperuser
