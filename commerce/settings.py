@@ -84,7 +84,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # Internationalization
-LANGUAGE_CODE = "id"
+LANGUAGE_CODE = "en"
 TIME_ZONE = "Asia/Jakarta"
 USE_I18N = True
 USE_TZ = True
