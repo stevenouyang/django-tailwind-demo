@@ -22,6 +22,7 @@ from django.conf import settings
 
 urlpatterns = [
     path("admin/", admin.site.urls, name="django_admin"),
+    path("jet/", include("jet.urls", "jet")),
     path("", include("crm.urls")),
     path("", include("product.urls")),
     path("__reload__/", include("django_browser_reload.urls")),

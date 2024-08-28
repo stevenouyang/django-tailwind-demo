@@ -14,6 +14,8 @@ ALLOWED_HOSTS = []
 
 # Application definition
 INSTALLED_APPS = [
+    # external - admin
+    "jet",
     # django
     "django.contrib.admin",
     "django.contrib.auth",
